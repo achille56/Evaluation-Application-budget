@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application budget</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div id="menuTop">
+                <h1>CALCUL DU BUDGET</h1>
+            </div>
+            <div id="menuLeft">
+                <h2>CALCUL DES DEPENSES</h2>
+            </div>
+        </header>
+
+        <main>
+            <div id="mainLeft">
+                <div id="expenseCalculation">
+                    <div id="fixedExpenses">
+                        <h3>Dépenses fixes :</h3>
+                        <p>Eau/Electricité/Gaz</p>
+                        <input type="number" id="gasElecWater">
+                        <p>Téléphone/Internet</p>
+                        <input type="number" id="phoneInternet">
+                        <p>Mutuelle Santé</p>
+                        <input type="number" id="mutualHealth">
+                        <p>Impôts sur le revenus</p>
+                        <input type="number" id="incomeTax">
+                        <p>Impôts locaux</p>
+                        <input type="number" id="localTax">
+                        <p>Assurance habitation</p>
+                        <input type="number" id="homeInsurance">
+                        <p>Assurance voiture</p>
+                        <input type="number" id="carInsurance">
+                        <p>Loyer et charges</p>
+                        <input type="number" id="rent">
+                    </div>
+                    <div id="currentExpenses">
+                        <h3>Dépenses courantes :</h3>
+                        <p>Les courses</p>
+                        <input type="number" id="shopping">
+                        <p>Essence</p>
+                        <input type="number" id="essence">
+                        <p>Activité sportive</p>
+                        <input type="number" id="sport">
+                    </div>
+                    <div id="occasionalExpenses">
+                        <h3>Dépenses occasionnelles :</h3>
+                        <p>Sortie en famille</p>
+                        <input type="number" id="familyExit">
+                        <p>Autre</p>
+                        <input type="number" id="other">
+                        <p>Vacances</p>
+                        <input type="number" id="holidays">
+                    </div>
+                </div>
+            </div>
+
+            <div id="mainRight">
+                <div id="calculatesRecipes">
+                    <h2>CALCUL DES RECETTES</h2>
+                    <div>
+                        <p>Salaire</p>
+                        <input type="number" id="salary">
+                        <p>Prime d'activité</p>
+                        <input type="number" id="activityBonus">
+                        <p>Location de bien immobilier</p>
+                        <input type="number" id="realEstateRental">
+                    </div>
+                </div>
+
+                <div id="total">
+                    <div>
+                        <p>Dépense TOTAL : <span id="totalDepenses"></span></p>
+                    </div>
+                    <button onclick="additionTotalDepenses()">RESULTAT</button>
+                    <div>
+                        <br>
+                        <p>Recette TOTAL : <span id="totalRecipes"></span></p>
+                    </div>
+                    <button onclick="additionneRecipesTotal()">RESULTAT</button>
+                </div>
+
+                <div id="allResult">
+                    <div id="result">
+                        <button onclick="resultsAll()">RESULTAT TOTAL</button>
+                        <input type="text" id="resultAll">
+                    </div>
+                    <br>
+                    <div>
+                        <button onclick="reset()">RESET</button>
+                    </div>
+                    <br>
+                    <div id="addExpense">
+                        <p>
+                            <button onclick="newExpense()">AJOUT DEPENSE</button>
+                            <input type="number" id="expense">
+                        </p>
+                    </div>
+                    <div id="addRecipe">
+                        <p>
+                            <button onclick="newRecipe()">AJOUT RECETTE</button>
+                            <input type="number" id="recipe">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div id="saving">
+                <div id="saving2">
+                    <p>Epargne : </p>
+                    <input type="text" id="saving3">
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="../JS/app.js"></script>
+</body>
+
+</html>
